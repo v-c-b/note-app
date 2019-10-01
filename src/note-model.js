@@ -2,7 +2,7 @@
   function note(text) {
     this.text = text
   }
-  note.prototype.return_text = function() {
+  note.prototype.returnText = function() {
     return this.text
   }
   exports.note = note;
