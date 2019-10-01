@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>JS notes app tests</title>
+  <script src="src/note-model.js"></script>
+  <script src="test/assert.js"></script>
+  <script src="test/test-runner.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+</head>
+<script>
+  $(document).ready(function() {
+    $(".test_log").append("<li>" + testDefaultText() + "</li>");
+  });
+</script>
+
+<body>
+  <div class="test_log"> </div>
+
+</body>
+</html>
