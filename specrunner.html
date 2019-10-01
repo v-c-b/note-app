@@ -2,6 +2,7 @@
 <head>
   <title>JS notes app tests</title>
   <script src="src/note-model.js"></script>
+  <script src="src/note-list-model.js"></script>
   <script src="test/assert.js"></script>
   <script src="test/test-runner.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
@@ -9,6 +10,8 @@
 <script>
   $(document).ready(function() {
     $(".test_log").append("<li>" + testDefaultText() + "</li>");
+    $(".test_log").append("<li>" + testNewNoteOnList() + "</li>");
+
   });
 </script>
 
