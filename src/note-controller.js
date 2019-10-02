@@ -9,10 +9,10 @@ $(document).ready(function() {
 
 
   function createNoteRow(){
-    this.htmlString = "<tr><td>";
-    htmlString += "<a href=#notes/" + newNoteList.returnList().pop().returnID() + ">";
+    this.htmlString = '<tr><td>';
+    htmlString += '<a href=#notes/' + newNoteList.returnList()[newNoteList.returnList().length - 1].returnID() + '>';
     htmlString += newNoteList.returnList().pop().returnText();
-    htmlString += "<a/></td></tr>";
+    htmlString += '<a/></td></tr>';
     return htmlString;
   }
   exports.createNoteRow = createNoteRow;
