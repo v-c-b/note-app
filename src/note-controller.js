@@ -26,6 +26,7 @@ listenForHashChange();
 
 function showNoteForCurrentPage() {
   showNote(getNoteFromUrl(window.location));
+  console.log("test")
 };
 
 function getNoteFromUrl(location) {

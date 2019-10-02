@@ -4,4 +4,13 @@ function testNoteListOnSite() {
     console.log(document.getElementById('noteTable').innerHTML)
   }
   else { console.log("On site as expected") }
-}
+};
+
+function testHashChange() {
+  document.location.hash = '#notes/1'
+  if(document.getElementById('note to display').innerHTML !== 'test') {
+    console.log("Full note text not displayed as expected");
+    console.log(document.getElementById('note to display').innerHTML);
+  }
+  else { console.log("Note displayed as expected") }
+};
