@@ -26,7 +26,6 @@ listenForHashChange();
 
 function showNoteForCurrentPage() {
   showNote(getNoteFromUrl(window.location));
-  console.log("test")
 };
 
 function getNoteFromUrl(location) {
@@ -34,7 +33,13 @@ function getNoteFromUrl(location) {
 };
 
 function showNote(note) {
-  document
+  if (note != null) {
+    document
     .getElementById("note to display")
     .innerHTML = newNoteList.returnList()[note].text;
+  } else
+  {document
+  .getElementById("note to display")
+  .innerHTML = '';
+  }
 };
