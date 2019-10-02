@@ -10,3 +10,8 @@ function testNewNoteOnList() { return arguments.callee.name + ': ' + assert.isTr
 var test_note_array2 =  new noteList()
 test_note_array2.createNote("12345678901234567890++")
 function testNoteMaxLength() { return arguments.callee.name + ': ' + assert.isTrue(test_note_array2.returnList().pop().returnText() === '12345678901234567890') }
+
+var test_note_array3 =  new noteList()
+test_note_array3.createNote("Favorite drink: Beer")
+test_note_array3.createNote("Favorite drink: Wine")
+function testNewNoteID() { return arguments.callee.name + ': ' + assert.isTrue(test_note_array3.returnList().pop().returnID() === 1) }
