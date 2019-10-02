@@ -5,13 +5,15 @@ $(document).ready(function() {
 (function(exports){
   var newNoteList = new noteList();
   newNoteList.createNote("Favourite drink: seltzer.");
-  
+  newNoteList.createNote("Favourite drink: Beer");
+
+
   function createNoteRow(){
     this.htmlString = "<tr><td>";
+    htmlString += "<a href=#notes/" + newNoteList.returnList().pop().returnID() + ">";
     htmlString += newNoteList.returnList().pop().returnText();
-    htmlString += "</td></tr>";
+    htmlString += "<a/></td></tr>";
     return htmlString;
   }
   exports.createNoteRow = createNoteRow;
 })(this);
-
