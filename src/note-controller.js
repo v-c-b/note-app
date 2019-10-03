@@ -43,3 +43,8 @@ function showNote(note) {
   .innerHTML = '';
   }
 };
+
+document.addEventListener("click", function(event) {
+         console.log("Form submission intercepted");
+         event.preventDefault();
+}, false);
