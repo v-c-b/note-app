@@ -44,7 +44,9 @@ function showNote(note) {
   }
 };
 
-document.addEventListener("click", function(event) {
+document.addEventListener("submit", function(event) {
          console.log("Form submission intercepted");
+         console.log(event);
+         console.log(event.target[0].value);
          event.preventDefault();
 }, false);
