@@ -15,3 +15,8 @@ var test_note_array3 =  new noteList()
 test_note_array3.createNote("Favorite drink: Beer")
 test_note_array3.createNote("Favorite drink: Wine")
 function testNewNoteID() { return arguments.callee.name + ': ' + assert.isTrue(test_note_array3.returnList().pop().returnID() === 1) }
+
+var newNoteList =  new noteList()
+newNoteList.createNote("123")
+newNoteList.createNote("1234")
+function testReturnRow() { return arguments.callee.name + ': ' + assert.isTrue( createNoteRow(1) === '<tr><td><a href=#notes/1>1234<a/></td></tr>') }

@@ -14,27 +14,22 @@
 <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 <script src="src/note-model.js"></script>
 <script src="src/note-list-model.js"></script>
+<script src="src/note-table.js"></script>
+<script src="src/note-display.js"></script>
 <script src="src/note-controller.js"></script>
 <script src="test/testonsite.js"></script>
-
-
 <script>
-  $(document).ready(function() {
-    for (i=0; i< newNoteList.returnList().length; i++) {
-      $("#noteTable").append(createNoteRow(i));
-    }
-    testNoteListOnSite();
-    testHashChange();
-  });
+  var newNoteList = new noteList();
 </script>
 
 <table id="noteTable"></table>
+
 <div id="note to display"></div>
 
 <form>
 </br>
   Please enter note<br>
-  <form action="#submitForm" method="post">
+  <form action="#submitForm" method="post" name="noteform">
   <input type="text" id="text"/>
   <input type="submit" name = "submitButton" value="Submit"/>
 </form>
@@ -42,3 +37,11 @@
 
 </body>
 </html>
+
+
+<script>
+  testNoteListOnSite(newNoteList);
+  testHashChange();
+  // newNoteList = new noteList();
+  // console.log(newNoteList)
+</script>
